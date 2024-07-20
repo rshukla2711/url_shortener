@@ -4,7 +4,7 @@ const validUrl = require("valid-url");
 const shortid = require("shortid");
 const { URLModel } = require("../models/urlmodel");
 const { generateShortId } = require("../utils");
-
+require("dotenv").config();
 const baseUrl = process.env.BASEURI;
 
 
