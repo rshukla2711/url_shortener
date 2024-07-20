@@ -16,6 +16,7 @@ function UrlShortener() {
     const [error, setError] = useState(false);
     const { hasCopied, onCopy } = useClipboard(url);
     const clientBaseUrl = window.location.href;
+    console.log("hey", urlroute);
     const handleInputChange = (e) => {
         setInput({ ...input, [ e.target.name ]: e.target.value });
     };
@@ -37,7 +38,7 @@ function UrlShortener() {
                 let createUrl = clientBaseUrl + data.urlCode;
                 setUrl(createUrl);
             }
-            console.log("hey",urlroute);
+            
             console.log("res", res);
         }).catch(error => {
             let errorMsg = error.response.data.error;
