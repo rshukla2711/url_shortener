@@ -37,6 +37,7 @@ function UrlShortener() {
                 let createUrl = clientBaseUrl + data.urlCode;
                 setUrl(createUrl);
             }
+            console.log("hey",urlroute);
             console.log("res", res);
         }).catch(error => {
             let errorMsg = error.response.data.error;
